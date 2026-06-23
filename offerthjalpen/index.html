@@ -3,64 +3,231 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Integritetspolicy - Offerthjälpen</title>
+  <title>Integritetspolicy – Offerthjälpen</title>
   <style>
+    :root {
+      --navy: #1B2F5B;
+      --navy-mid: #243a70;
+      --gold: #E8A020;
+      --bg: #F2F0EC;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #dde1ea;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 32px 20px;
-      color: #1f2933;
-      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
     }
 
-    h1, h2 {
-      color: #12345a;
+    header {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+      color: var(--white);
+      padding: 56px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    h1 {
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .app-icon {
+      width: 72px; height: 72px;
+      background: var(--white);
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      font-size: 36px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
       margin-bottom: 8px;
     }
 
-    .updated {
-      color: #666;
-      margin-bottom: 32px;
+    .subtitle {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      font-weight: 400;
     }
 
-    section {
-      margin-bottom: 28px;
+    .badge {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.85);
+      font-size: 12px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.18);
     }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .section {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-num {
+      width: 32px; height: 32px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .section p {
+      color: #374151;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
 
     ul {
-      padding-left: 22px;
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      color: #374151;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 8px;
+      flex-shrink: 0;
+    }
+
+    .highlight {
+      background: #f0f4ff;
+      border-left: 3px solid var(--navy);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--navy-mid);
     }
 
     a {
-      color: #0b63ce;
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 1px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    footer strong {
+      color: var(--navy);
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 40px 20px 36px; }
+      header h1 { font-size: 22px; }
+      .section { padding: 20px; }
     }
   </style>
 </head>
 <body>
-  <h1>Integritetspolicy för Offerthjälpen</h1>
-  <p class="updated">Senast uppdaterad: 1 juni 2026</p>
 
-  <section>
-    <h2>1. Om appen</h2>
-    <p>
-      Offerthjälpen är en app som hjälper användaren att skapa kunder, produkter/tjänster,
-      offerter och PDF-dokument direkt i mobilen.
-    </p>
-    <p>
-      Appen utvecklas och tillhandahålls av Aion Apps.
-    </p>
-  </section>
+<header>
+  <div class="app-icon">📄</div>
+  <h1>Integritetspolicy</h1>
+  <p class="subtitle">Offerthjälpen · Aion Apps</p>
+  <span class="badge">Senast uppdaterad: 1 juni 2026</span>
+</header>
 
-  <section>
-    <h2>2. Vilka uppgifter appen hanterar</h2>
-    <p>
-      Offerthjälpen kan hantera uppgifter som användaren själv lägger in i appen, till exempel:
-    </p>
+<main>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <h2>Om appen</h2>
+    </div>
+    <p>Offerthjälpen är en app som hjälper användaren att skapa kunder, produkter/tjänster, offerter och PDF-dokument direkt i mobilen.</p>
+    <p>Appen utvecklas och tillhandahålls av <strong>Aion Apps</strong>.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <h2>Vilka uppgifter appen hanterar</h2>
+    </div>
+    <p>Offerthjälpen kan hantera uppgifter som användaren själv lägger in i appen, till exempel:</p>
     <ul>
       <li>Kundnamn och företagsnamn</li>
       <li>Kontaktperson</li>
@@ -73,110 +240,109 @@
       <li>Företagslogga och kundlogga</li>
       <li>PDF-offerter och backupfiler som användaren själv skapar eller exporterar</li>
     </ul>
-  </section>
+  </div>
 
-  <section>
-    <h2>3. Lokal lagring</h2>
-    <p>
-      De uppgifter som användaren lägger in i Offerthjälpen sparas lokalt på användarens enhet.
-      Appen har ingen egen server och skickar inte kundregister, offerter eller företagsuppgifter
-      automatiskt till utvecklaren.
-    </p>
-  </section>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <h2>Lokal lagring</h2>
+    </div>
+    <p>De uppgifter som användaren lägger in i Offerthjälpen sparas lokalt på användarens enhet.</p>
+    <div class="highlight">Appen har ingen egen server och skickar inte kundregister, offerter eller företagsuppgifter automatiskt till utvecklaren.</div>
+  </div>
 
-  <section>
-    <h2>4. Google Play Billing</h2>
-    <p>
-      Offerthjälpen använder Google Play Billing för köp av Pro-versionen och eventuell
-      månadsprenumeration.
-    </p>
-    <p>
-      Betalningar, kvitton och prenumerationer hanteras av Google Play. Appen använder köpstatusen
-      för att avgöra om Pro-funktioner ska vara aktiva.
-    </p>
-    <p>
-      Prenumerationer hanteras och avslutas via Google Play.
-    </p>
-  </section>
-
-  <section>
-    <h2>5. E-post och delning</h2>
-    <p>
-      Appen kan hjälpa användaren att förbereda ett e-postmeddelande med mottagare, ämne, text
-      och bifogad PDF-offert.
-    </p>
-    <p>
-      Offerthjälpen skickar inte e-post automatiskt. Användaren väljer själv e-postapp och måste
-      själv skicka meddelandet.
-    </p>
-    <p>
-      Om användaren delar en PDF, backupfil eller annan fil via Androids delningsfunktion ansvarar
-      användaren själv för vilken app eller mottagare informationen delas med.
-    </p>
-  </section>
-
-  <section>
-    <h2>6. Bilder och loggor</h2>
-    <p>
-      Användaren kan välja bilder från enheten, till exempel företagslogga eller kundlogga.
-      Dessa bilder används i appen och sparas lokalt på enheten.
-    </p>
-  </section>
-
-  <section>
-    <h2>7. Konton och inloggning</h2>
-    <p>
-      Offerthjälpen har ingen egen kontoregistrering och ingen egen inloggning.
-    </p>
-  </section>
-
-  <section>
-    <h2>8. Delning med tredje part</h2>
-    <p>
-      Offerthjälpen säljer inte användardata och delar inte automatiskt kunduppgifter med utvecklaren.
-    </p>
-    <p>
-      Vissa funktioner kan använda externa tjänster när användaren själv väljer det, till exempel:
-    </p>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <h2>Köp och betalningar</h2>
+    </div>
+    <p>Offerthjälpen använder plattformens inbyggda betalsystem för köp av Pro-versionen och eventuell månadsprenumeration:</p>
     <ul>
-      <li>Google Play för köp och prenumerationer</li>
-      <li>E-postappar för att skicka offerter</li>
-      <li>Androids delningsfunktion för att dela PDF-filer eller backupfiler</li>
+      <li><strong>Android:</strong> Google Play Billing hanterar betalningar, kvitton och prenumerationer.</li>
+      <li><strong>iOS:</strong> Apple In-App Purchase (StoreKit) hanterar betalningar, kvitton och prenumerationer.</li>
     </ul>
-  </section>
+    <p style="margin-top:12px;">Appen använder köpstatusen för att avgöra om Pro-funktioner ska vara aktiva. Prenumerationer hanteras och avslutas via respektive plattforms inställningar.</p>
+  </div>
 
-  <section>
-    <h2>9. Radering av uppgifter</h2>
-    <p>
-      Användaren kan själv radera kunder, produkter, offerter och andra uppgifter i appen.
-      Användaren kan även radera all lokal appdata genom att rensa appdata eller avinstallera appen.
-    </p>
-  </section>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <h2>E-post och delning</h2>
+    </div>
+    <p>Appen kan hjälpa användaren att förbereda ett e-postmeddelande med mottagare, ämne, text och bifogad PDF-offert.</p>
+    <p>Offerthjälpen skickar inte e-post automatiskt. Användaren väljer själv e-postapp och måste själv skicka meddelandet.</p>
+    <p>Om användaren delar en PDF, backupfil eller annan fil via enhetens delningsfunktion (Android eller iOS) ansvarar användaren själv för vilken app eller mottagare informationen delas med.</p>
+  </div>
 
-  <section>
-    <h2>10. Barn</h2>
-    <p>
-      Offerthjälpen är inte riktad till barn. Appen är avsedd för personer och företag som vill
-      skapa och hantera offerter.
-    </p>
-  </section>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <h2>Bilder och loggor</h2>
+    </div>
+    <p>Användaren kan välja bilder från enheten, till exempel företagslogga eller kundlogga. Dessa bilder används i appen och sparas lokalt på enheten.</p>
+  </div>
 
-  <section>
-    <h2>11. Ändringar i denna policy</h2>
-    <p>
-      Denna integritetspolicy kan uppdateras vid behov, till exempel om appens funktioner ändras.
-      Den senaste versionen finns alltid på denna sida.
-    </p>
-  </section>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <h2>Konton och inloggning</h2>
+    </div>
+    <p>Offerthjälpen har ingen egen kontoregistrering och ingen egen inloggning.</p>
+  </div>
 
-  <section>
-    <h2>12. Kontakt</h2>
-    <p>
-      Vid frågor om denna integritetspolicy kan du kontakta oss via e-post:
-    </p>
-    <p>
-      <a href="mailto:tobias@kaarlsson.se">tobias@kaarlsson.se</a>
-    </p>
-  </section>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">8</div>
+      <h2>Delning med tredje part</h2>
+    </div>
+    <p>Offerthjälpen säljer inte användardata och delar inte automatiskt kunduppgifter med utvecklaren.</p>
+    <p>Vissa funktioner kan använda externa tjänster när användaren själv väljer det, till exempel:</p>
+    <ul>
+      <li>Google Play eller App Store för köp och prenumerationer</li>
+      <li>E-postappar för att skicka offerter</li>
+      <li>Enhetens delningsfunktion för att dela PDF-filer eller backupfiler</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">9</div>
+      <h2>Radering av uppgifter</h2>
+    </div>
+    <p>Användaren kan själv radera kunder, produkter, offerter och andra uppgifter i appen. Användaren kan även radera all lokal appdata genom att rensa appdata eller avinstallera appen.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">10</div>
+      <h2>Barn</h2>
+    </div>
+    <p>Offerthjälpen är inte riktad till barn. Appen är avsedd för personer och företag som vill skapa och hantera offerter.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">11</div>
+      <h2>Ändringar i denna policy</h2>
+    </div>
+    <p>Denna integritetspolicy kan uppdateras vid behov, till exempel om appens funktioner ändras. Den senaste versionen finns alltid på denna sida.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">12</div>
+      <h2>Kontakt</h2>
+    </div>
+    <p>Vid frågor om denna integritetspolicy kan du kontakta oss via e-post:</p>
+    <p style="margin-top:12px;"><a href="mailto:Aion@kaarlsson.se">Aion@kaarlsson.se</a></p>
+  </div>
+
+</main>
+
+<footer>
+  <strong>Offerthjälpen</strong> · Aion Apps · © 2026<br>
+  <span style="margin-top:4px;display:block;">Integritetspolicy gäller för Android och iOS</span>
+</footer>
+
 </body>
 </html>
