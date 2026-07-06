@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Integritetspolicy – Poonnasit Muaythai</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #0a0a0a;
+      color: #e0d5c5;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: linear-gradient(180deg, #1a0000 0%, #0a0a0a 100%);
+      text-align: center;
+      padding: 60px 20px 50px;
+      border-bottom: 1px solid #8b6914;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center top, rgba(139,105,20,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(28px, 6vw, 52px);
+      font-weight: 700;
+      color: #c9a84c;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-shadow: 0 0 30px rgba(201,168,76,0.4);
+      line-height: 1.1;
+    }
+
+    .hero-sub {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(12px, 2.5vw, 18px);
+      color: #8b6914;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 20px auto;
+      max-width: 300px;
+    }
+
+    .hero-divider span {
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, #8b6914);
+    }
+
+    .hero-divider span:last-child {
+      background: linear-gradient(90deg, #8b6914, transparent);
+    }
+
+    .hero-divider .diamond {
+      width: 8px;
+      height: 8px;
+      background: #c9a84c;
+      transform: rotate(45deg);
+      flex: none;
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(16px, 3vw, 24px);
+      color: #e0d5c5;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero-date {
+      font-size: 13px;
+      color: #666;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+
+    /* Content */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 50px 24px 80px;
+    }
+
+    .section {
+      margin-bottom: 44px;
+      border-left: 2px solid #8b6914;
+      padding-left: 24px;
+    }
+
+    .section h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(14px, 2.5vw, 18px);
+      color: #c9a84c;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: #bbb;
+      margin-bottom: 12px;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .section ul li {
+      font-size: 15px;
+      color: #bbb;
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .section ul li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: #8b6914;
+      font-size: 8px;
+      top: 10px;
+    }
+
+    /* Contact box */
+    .contact-box {
+      background: linear-gradient(135deg, #1a1a1a, #111);
+      border: 1px solid #8b6914;
+      border-radius: 4px;
+      padding: 28px 32px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .contact-box p {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 8px;
+    }
+
+    .contact-box a {
+      color: #c9a84c;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .contact-box a:hover {
+      text-shadow: 0 0 10px rgba(201,168,76,0.5);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #1a1a1a;
+      font-size: 12px;
+      color: #444;
+      letter-spacing: 1px;
+    }
+
+    footer span {
+      color: #8b6914;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-logo">Poonnasit<br>Muaythai</div>
+    <div class="hero-sub">มวยไทย</div>
+    <div class="hero-divider">
+      <span></span>
+      <div class="diamond"></div>
+      <span></span>
+    </div>
+    <div class="hero-title">Integritetspolicy</div>
+    <div class="hero-date">Senast uppdaterad: juli 2026</div>
+  </div>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>Introduktion</h2>
+      <p>Poonnasit Muaythai värnar om din integritet. Denna integritetspolicy förklarar hur vi samlar in, använder och skyddar dina personuppgifter när du använder vår mobilapplikation.</p>
+    </div>
+
+    <div class="section">
+      <h2>Information vi samlar in</h2>
+      <p>Vi samlar in följande typer av information:</p>
+      <ul>
+        <li>Namn och e-postadress vid registrering</li>
+        <li>Bokningsinformation för träningspass och seminarier</li>
+        <li>Betalningsinformation vid köp av videoserier (hanteras av Apple App Store eller Google Play)</li>
+        <li>Push-notifikationstokens för att skicka aviseringar</li>
+        <li>Teknisk information såsom enhetstyp och operativsystem</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Hur vi använder din information</h2>
+      <p>Vi använder din information för att:</p>
+      <ul>
+        <li>Hantera ditt konto och inloggning</li>
+        <li>Bekräfta och hantera bokningar av träningspass och seminarier</li>
+        <li>Skicka påminnelser och aviseringar om kommande pass</li>
+        <li>Verifiera och hantera köp av digitalt innehåll</li>
+        <li>Förbättra appens funktionalitet och användarupplevelse</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Tredjepartstjänster</h2>
+      <p>Vi använder följande betrodda tredjepartstjänster för att driva appen:</p>
+      <ul>
+        <li><strong style="color:#e0d5c5">Supabase</strong> — databas och autentisering</li>
+        <li><strong style="color:#e0d5c5">Firebase (Google)</strong> — push-notifikationer</li>
+        <li><strong style="color:#e0d5c5">Apple App Store / Google Play</strong> — betalningshantering</li>
+      </ul>
+      <p>Vi säljer aldrig dina personuppgifter till tredje part.</p>
+    </div>
+
+    <div class="section">
+      <h2>Datalagring och säkerhet</h2>
+      <p>Dina uppgifter lagras säkert i Supabase och skyddas med branschstandardiserad kryptering. Vi behåller dina uppgifter så länge ditt konto är aktivt, eller så länge det krävs för att tillhandahålla tjänsten.</p>
+    </div>
+
+    <div class="section">
+      <h2>Push-notifikationer</h2>
+      <p>Appen kan skicka push-notifikationer om bokningsbekräftelser, påminnelser och nyheter. Du kan när som helst stänga av notifikationer i din enhets inställningar.</p>
+    </div>
+
+    <div class="section">
+      <h2>Dina rättigheter</h2>
+      <p>Du har rätt att:</p>
+      <ul>
+        <li>Begära tillgång till de uppgifter vi har om dig</li>
+        <li>Begära rättelse av felaktiga uppgifter</li>
+        <li>Begära radering av ditt konto och tillhörande data</li>
+        <li>Återkalla ditt samtycke till databehandling</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Ändringar i policyn</h2>
+      <p>Vi kan komma att uppdatera denna integritetspolicy. Vid väsentliga ändringar informerar vi dig via appen eller e-post. Fortsatt användning av appen efter sådana ändringar innebär att du accepterar den uppdaterade policyn.</p>
+    </div>
+
+    <div class="contact-box">
+      <p>Frågor om din integritet? Kontakta oss på</p>
+      <a href="mailto:Aion@kaarlsson.se">Aion@kaarlsson.se</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>◆</span> &nbsp; Poonnasit Muaythai &nbsp; <span>◆</span><br><br>
+    © 2026 AionApps. Alla rättigheter förbehållna.
+  </footer>
+
+</body>
+</html>
