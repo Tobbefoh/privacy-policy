@@ -17,12 +17,11 @@
       line-height: 1.8;
     }
 
-    /* Hero */
     .hero {
       position: relative;
       background: linear-gradient(180deg, #1a0000 0%, #0a0a0a 100%);
       text-align: center;
-      padding: 60px 20px 50px;
+      padding: 50px 24px 50px;
       border-bottom: 1px solid #8b6914;
       overflow: hidden;
     }
@@ -33,6 +32,30 @@
       inset: 0;
       background: radial-gradient(ellipse at center top, rgba(139,105,20,0.15) 0%, transparent 70%);
       pointer-events: none;
+    }
+
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .hero-portrait {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 2px solid #8b6914;
+      box-shadow: 0 0 30px rgba(139,105,20,0.5);
+      flex-shrink: 0;
+    }
+
+    .hero-text {
+      text-align: center;
     }
 
     .hero-logo {
@@ -60,8 +83,8 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      margin: 20px auto;
-      max-width: 300px;
+      margin: 16px auto;
+      max-width: 260px;
     }
 
     .hero-divider span {
@@ -84,7 +107,7 @@
 
     .hero-title {
       font-family: 'Cinzel', serif;
-      font-size: clamp(16px, 3vw, 24px);
+      font-size: clamp(14px, 3vw, 22px);
       color: #e0d5c5;
       letter-spacing: 3px;
       text-transform: uppercase;
@@ -93,11 +116,10 @@
     .hero-date {
       font-size: 13px;
       color: #666;
-      margin-top: 10px;
+      margin-top: 8px;
       letter-spacing: 1px;
     }
 
-    /* Content */
     .container {
       max-width: 780px;
       margin: 0 auto;
@@ -148,7 +170,6 @@
       top: 10px;
     }
 
-    /* Contact box */
     .contact-box {
       background: linear-gradient(135deg, #1a1a1a, #111);
       border: 1px solid #8b6914;
@@ -176,7 +197,6 @@
       text-shadow: 0 0 10px rgba(201,168,76,0.5);
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -194,15 +214,24 @@
 <body>
 
   <div class="hero">
-    <div class="hero-logo">Poonnasit<br>Muaythai</div>
-    <div class="hero-sub">มวยไทย</div>
-    <div class="hero-divider">
-      <span></span>
-      <div class="diamond"></div>
-      <span></span>
+    <div class="hero-inner">
+      <img
+        class="hero-portrait"
+        src="https://tobbefoh.github.io/privacy-policy/Poonnasit.png"
+        alt="Poonnasit Muaythai"
+      />
+      <div class="hero-text">
+        <div class="hero-logo">Poonnasit<br>Muaythai</div>
+        <div class="hero-sub">มวยไทย</div>
+        <div class="hero-divider">
+          <span></span>
+          <div class="diamond"></div>
+          <span></span>
+        </div>
+        <div class="hero-title">Integritetspolicy</div>
+        <div class="hero-date">Senast uppdaterad: juli 2026</div>
+      </div>
     </div>
-    <div class="hero-title">Integritetspolicy</div>
-    <div class="hero-date">Senast uppdaterad: juli 2026</div>
   </div>
 
   <div class="container">
